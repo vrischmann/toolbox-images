@@ -8,8 +8,10 @@ LABEL com.github.containers.toolbox="true" \
       summary="Base image for creating Debian buster toolbox containers" \
       maintainer="Vincent Rischmann <vincent@rischmann.fr>"
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && apt-get -y upgrade && \
-    apt-get -y install fish git sudo build-essential && \
+    apt-get -y install fish git sudo build-essential dialog apt-utils locales-all && \
     apt-get clean
 
 RUN sed -i -e 's/ ALL$/ NOPASSWD:ALL/' /etc/sudoers
