@@ -1,0 +1,18 @@
+FROM docker.io/library/archlinux:latest
+
+ENV NAME=archlinux-toolbox VERSION=latest
+LABEL com.github.containers.toolbox="true" \
+      name="$NAME" \
+      version="$VERSION" \
+      usage="This image is meant to be used with the toolbox command" \
+      summary="Base image for creating ArchLinux toolbox containers" \
+      maintainer="Vincent Rischmann <vincent@rischmann.fr>"
+
+RUN pacman --noconfirm -Sy sudo fish \
+	&& pacman --noconfirm -Sc
+RUN echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel
+
+#RUN echo VARIANT_ID=container >> /etc/os-release
+#RUN touch /etc/localtime
+
+CMD /bin/bash
