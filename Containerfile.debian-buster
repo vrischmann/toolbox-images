@@ -11,7 +11,7 @@ LABEL com.github.containers.toolbox="true" \
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get -y upgrade && \
-    apt-get -y install fish git sudo build-essential dialog apt-utils locales-all && \
+    apt-get -y install libcap2-bin fish git sudo build-essential dialog apt-utils locales-all && \
     apt-get clean
 
 RUN sed -i -e 's/ ALL$/ NOPASSWD:ALL/' /etc/sudoers
