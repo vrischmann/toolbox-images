@@ -10,7 +10,7 @@ LABEL com.github.containers.toolbox="true" \
 
 RUN dnf group install -y c-development
 RUN dnf install -y \
-	fish kitty-terminfo ripgrep \
+	fish kitty-terminfo ripgrep neovim \
 	zlib-devel libxml2-devel libzstd-devel \
 	cmake ninja-build llvm llvm-devel clang-devel lld lld-devel ncurses-devel ncurses-static
 RUN dnf clean all
