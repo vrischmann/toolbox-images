@@ -1,11 +1,11 @@
-FROM docker.io/library/debian:bullseye
+FROM docker.io/library/debian:bookworm
 
-ENV NAME=debian-toolbox VERSION=bullseye
+ENV NAME=debian-toolbox VERSION=bookworm
 LABEL com.github.containers.toolbox="true" \
       name="$NAME" \
       version="$VERSION" \
       usage="This image is meant to be used with the toolbox command" \
-      summary="Base image for creating Debian bullseye toolbox containers" \
+      summary="Base image for creating Debian bookworm toolbox containers" \
       maintainer="Vincent Rischmann <vincent@rischmann.fr>"
 
 ENV DEBIAN_FRONTEND=noninteractive
