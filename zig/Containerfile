@@ -11,6 +11,6 @@ LABEL com.github.containers.toolbox="true" \
 RUN dnf group install -y c-development
 RUN dnf install -y \
 	fish kitty-terminfo ripgrep neovim \
-	zlib-devel libxml2-devel libzstd-devel \
-	cmake ninja-build llvm llvm-devel clang-devel lld lld-devel ncurses-devel ncurses-static
+	zlib-devel libxml2-devel libzstd-devel ncurses-devel ncurses-static \
+	cmake ninja-build llvm llvm-devel clang-devel lld lld-devel libstdc++-static
 RUN dnf clean all
