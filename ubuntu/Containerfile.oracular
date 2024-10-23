@@ -1,6 +1,6 @@
-FROM docker.io/library/ubuntu:oracular
+FROM quay.io/toolbx/ubuntu-toolbox:24.10
 
-ENV NAME=ubuntu-toolbox VERSION=oracular
+ENV NAME=ubuntu-toolbox
 LABEL com.github.containers.toolbox="true" \
       name="$NAME" \
       version="$VERSION" \
