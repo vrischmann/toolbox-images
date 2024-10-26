@@ -11,5 +11,6 @@ LABEL com.github.containers.toolbox="true" \
 RUN dnf group install -y c-development
 RUN dnf install -y \
 	fish kitty-terminfo ripgrep neovim \
-	cmake ninja-build
+	cmake ninja-build \
+	rpmdevtools python3-rust2rpm copr-cli
 RUN dnf clean all
