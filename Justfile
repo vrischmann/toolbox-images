@@ -14,3 +14,7 @@ build-ubuntu:
 
 build-archlinux:
 	podman build --squash --tag archlinux-toolbox:latest -f archlinux/Containerfile .
+
+build-rpmdev:
+	podman build --squash --tag rpmdev-toolbox:rawhide -f rpmdev/Containerfile .
+

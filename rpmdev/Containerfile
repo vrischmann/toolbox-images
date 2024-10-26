@@ -1,0 +1,15 @@
+FROM registry.fedoraproject.org/fedora-toolbox:rawhide
+
+ARG NAME=rpmdev-toolbox
+ARG VERSION=rawhide
+LABEL com.github.containers.toolbox="true" \
+      name="$NAME" \
+      version="$VERSION" \
+      usage="This image is meant to be used with the toolbox(1) command" \
+      summary="Image for building rpm using the rpm tools"
+
+RUN dnf group install -y c-development
+RUN dnf install -y \
+	fish kitty-terminfo ripgrep neovim \
+	cmake ninja-build
+RUN dnf clean all
