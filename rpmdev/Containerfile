@@ -12,5 +12,5 @@ RUN dnf group install -y c-development
 RUN dnf install -y \
 	fish kitty-terminfo ripgrep neovim \
 	cmake ninja-build \
-	rpmdevtools python3-rust2rpm copr-cli
+	rpmdevtools python3-rust2rpm copr-cli mock mock-scm
 RUN dnf clean all
