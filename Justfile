@@ -4,7 +4,7 @@ build-ruby:
 	podman build --squash --tag ruby-toolbox:40 -f ruby/Containerfile .
 
 build-zig:
-	podman build --squash --tag zig-toolbox:rawhide -f zig/Containerfile .
+	podman build --squash --tag zig-toolbox:41 -f zig/Containerfile .
 
 build-debian:
 	podman build --squash --tag debian-toolbox:bookworm -f debian/Containerfile.bookworm .

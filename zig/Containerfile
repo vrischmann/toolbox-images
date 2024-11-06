@@ -1,7 +1,7 @@
-FROM registry.fedoraproject.org/fedora-toolbox:rawhide
+FROM registry.fedoraproject.org/fedora-toolbox:41
 
 ARG NAME=zig-toolbox
-ARG VERSION=rawhide
+ARG VERSION=41
 LABEL com.github.containers.toolbox="true" \
       name="$NAME" \
       version="$VERSION" \
@@ -12,5 +12,5 @@ RUN dnf group install -y c-development
 RUN dnf install -y \
 	fish kitty-terminfo ripgrep neovim \
 	zlib-devel libxml2-devel libzstd-devel ncurses-devel ncurses-static \
-	cmake ninja-build llvm llvm-devel clang-devel lld lld-devel libstdc++-static
+	cmake ninja-build
 RUN dnf clean all
