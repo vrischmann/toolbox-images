@@ -1,7 +1,7 @@
-FROM registry.fedoraproject.org/fedora-toolbox:40
+FROM registry.fedoraproject.org/fedora-toolbox:41
 
 ARG NAME=ruby-toolbox
-ARG VERSION=40
+ARG VERSION=41
 LABEL com.github.containers.toolbox="true" \
       name="$NAME" \
       version="$VERSION" \
