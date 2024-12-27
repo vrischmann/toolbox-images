@@ -1,7 +1,7 @@
 build: build-ruby build-zig build-debian build-ubuntu build-archlinux
 
 build-ruby:
-	podman build --squash --tag ruby-toolbox:40 -f ruby/Containerfile .
+	podman build --squash --tag ruby-toolbox:41 -f ruby/Containerfile .
 
 build-zig:
 	podman build --squash --tag zig-toolbox:41 -f zig/Containerfile .
